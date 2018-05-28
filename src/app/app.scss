@@ -14,3 +14,277 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.background {
+    background: url('../assets/imgs/circles-light.png') no-repeat fixed center;
+    background-size: cover;
+  }
+  @font-face {
+    font-family: Coptic;
+    src: url('../assets/fonts/coptic.ttf')
+  }
+  @font-face {
+    font-family: STACoptic;
+    src: url('../assets/fonts/FreeSerifAthanasius.ttf')
+  }
+  
+// Coptic Language Characters
+  .fa-alpha-lower:before {
+    content: 'a';
+  }
+
+  .fa-alpha-upper:before {
+    content: 'A';
+  }
+
+  .fa-beta-lower:before {
+    content: 'b';
+  }
+
+  .fa-beta-upper:before {
+    content: 'B';
+  }
+
+  .fa-gamma-lower:before {
+    content: 'g';
+  }
+
+  .fa-gamma-upper:before {
+    content: 'G';
+  }
+
+  .fa-delta-lower:before {
+    content: 'd';
+  }
+
+  .fa-delta-upper:before {
+    content: 'D';
+  }
+
+  .fa-ei-lower:before {
+    content: 'e';
+  }
+
+  .fa-ei-upper:before {
+    content: 'E';
+  }
+
+  .fa-so-lower:before {
+    content: '6';
+  }
+
+  .fa-so-upper:before {
+    content: '^';
+  }
+
+  .fa-zeta-lower:before {
+    content: 'z';
+  }
+
+  .fa-zeta-upper:before {
+    content: 'Z';
+  }
+
+  .fa-eta-lower:before {
+    content: '/';
+  }
+
+  .fa-eta-upper:before {
+    content: '?';
+  }
+
+  .fa-theta-lower:before {
+    content: 'y';
+  }
+
+  .fa-theta-upper:before {
+    content: 'Y';
+  }
+
+  .fa-iota-lower:before {
+    content: 'i';
+  }
+
+  .fa-iota-upper:before {
+    content: 'I';
+  }
+
+  .fa-kappa-lower:before {
+    content: 'k';
+  }
+
+  .fa-kappa-upper:before {
+    content: 'K';
+  }
+
+  .fa-lola-lower:before {
+    content: 'l';
+  }
+
+  .fa-lola-upper:before {
+    content: 'L';
+  }
+
+  .fa-mei-lower:before {
+    content: 'm';
+  }
+
+  .fa-mei-upper:before {
+    content: 'M';
+  }
+
+  .fa-nei-lower:before {
+    content: 'n';
+  }
+
+  .fa-nei-upper:before {
+    content: 'N';
+  }
+
+  .fa-eksi-lower:before {
+    content: 'x';
+  }
+
+  .fa-eksi-upper:before {
+    content: 'X';
+  }
+
+  .fa-o-lower:before {
+    content: 'o';
+  }
+
+  .fa-o-upper:before {
+    content: 'O';
+  }
+
+  .fa-pi-lower:before {
+    content: 'p';
+  }
+
+  .fa-pi-upper:before {
+    content: 'P';
+  }
+
+  .fa-ro-lower:before {
+    content: 'r';
+  }
+
+  .fa-ro-upper:before {
+    content: 'R';
+  }
+
+  .fa-sima-lower:before {
+    content: 'c';
+  }
+
+  .fa-sima-upper:before {
+    content: 'C';
+  }
+
+  .fa-tav-lower:before {
+    content: 't';
+  }
+
+  .fa-tav-upper:before {
+    content: 'T';
+  }
+
+  .fa-epsilon-lower:before {
+    content: 'u';
+  }
+
+  .fa-epsilon-upper:before {
+    content: 'U';
+  }
+
+  .fa-fai-lower:before {
+    content: 'v';
+  }
+
+  .fa-fai-upper:before {
+    content: 'V';
+  }
+
+  .fa-khe-lower:before {
+    content: ',';
+  }
+
+  .fa-khe-upper:before {
+    content: '<';
+  }
+
+  .fa-epsi-lower:before {
+    content: '\'';
+  }
+
+  .fa-epsi-upper:before {
+    content: '"';
+  }
+
+  .fa-ou-lower:before {
+    content: 'w';
+  }
+
+  .fa-ou-upper:before {
+    content: 'W';
+  }
+
+  .fa-shai-lower:before {
+    content: 's';
+  }
+
+  .fa-shai-upper:before {
+    content: 'S';
+  }
+
+  .fa-fay-lower:before {
+    content: 'f';
+  }
+
+  .fa-fay-upper:before {
+    content: 'F';
+  }
+
+  .fa-khai-lower:before {
+    content: 'q';
+  }
+
+  .fa-khai-upper:before {
+    content: 'Q';
+  }
+
+  .fa-hori-lower:before {
+    content: 'h';
+  }
+
+  .fa-hori-upper:before {
+    content: 'H';
+  }
+
+  .fa-janja-lower:before {
+    content: 'j';
+  }
+
+  .fa-janja-upper:before {
+    content: 'J';
+  }
+
+  .fa-shema-lower:before {
+    content: '[';
+  }
+
+  .fa-shema-upper:before {
+    content: '{';
+  }
+
+  .fa-ti-lower:before {
+    content: ']';
+  }
+
+  .fa-ti-upper:before {
+    content: '}';
+  }
+
+
+
+
+

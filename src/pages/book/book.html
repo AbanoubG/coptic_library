@@ -1,0 +1,30 @@
+<ion-header class="bar-stable">
+    <button class="button back-button buttons no-text button-clear header-item" ng-click="$ionicGoBack()"><i class="icon ion-android-arrow-back"></i></button>
+    <h1 class="title">{{book.name}} {{chapter + 1}}</h1>
+    <div class="buttons buttons-right">
+      <button class="button button-icon button-clear ion-android-more-vertical" ng-click="mainPopover.show($event)"></button>
+    </div>
+  </ion-header>
+
+  <ion-content>
+    <div class="chapters-list" ng-class="{'showChapters' : showingChapters}">
+      <ion-scroll zooming="false" direction="y" style="width: 60px; height: 100%">
+        <div class="item" ng-click="goToSlide($index)" ng-repeat="i in chaptersArray">{{i + 1}}</div>
+      </ion-scroll>
+    </div>
+
+    <div style="left:60px" ng-click="toggleChapters(false)" class="backdrop active" ng-class="{'visible' : showChaptersBackdrop}"></div>
+
+    <ion-slide-box on-hold="toggleChapters(true)" class="chapters-slides" ng-class="{'scaleSlide' : showingChapters}" show-pager="false" active-slide="activeSlide" on-slide-changed="slideChanged(index)">
+      <ion-slide class="slide" ng-repeat="chapter in chaptersArray" ng-if="$index < chaptersCount">
+        <ion-content>
+          <!-- <div class="padding" ng-bind-html="to_trusted(book.chapters[$index].stringVerses)"></div> -->
+          <div ng-click="previewVerse($index + 1, verse[$index + 1])" ng-repeat="verse in book.chapters[$index].verses" style="margin:15px 25px">
+            <strong><sup style="color:#FF5722;font-weight:bolder">{{$index + 1}}</sup></strong>
+            {{verse[$index + 1]}}
+          </div>
+          <br>
+        </ion-content>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-content>
