@@ -1,5 +1,16 @@
 page-coptic-language {
-    body, span, h1, h2, h3, h4, h5, h6, p, ion-icon  {
-        font-family: 'Coptic' !important
+    body, span, h1, h2, h3, h4, h5, h6, p, .fa-alpha-upper, .fa-alpha-lower,
+    .fa-beta-upper,.fa-beta-lower,.fa-gamma-upper,.fa-gamma-lower,.fa-delta-upper,
+    .fa-delta-lower,.fa-ei-upper,.fa-ei-lower,.fa-so-upper,.fa-so-lower,.fa-zeta-upper,
+    .fa-zeta-lower,.fa-eta-upper,.fa-eta-lower,.fa-theta-upper,.fa-theta-lower,.fa-iota-upper,
+    .fa-iota-lower,.fa-kappa-upper,.fa-kappa-lower,.fa-lola-upper,.fa-lola-lower,.fa-mei-upper,
+    .fa-mei-lower,.fa-nei-upper,.fa-nei-lower,.fa-eksi-upper,.fa-eksi-lower,.fa-o-upper,.fa-o-lower,
+    .fa-pi-upper,.fa-pi-lower,.fa-ro-upper,.fa-ro-lower,.fa-sima-upper,.fa-sima-lower,.fa-tav-upper,.fa-tav-lower,
+    .fa-epsilon-upper,.fa-epsilon-lower,.fa-fai-upper,.fa-fai-lower,.fa-khe-upper,.fa-khe-lower,.fa-epsi-upper,.fa-alpha-lower,
+    .fa-epsi-lower,.fa-ou-upper,.fa-ou-lower,.fa-shai-upper,.fa-shai-lower,.fa-fay-upper,.fa-fay-lower,.fa-hori-upper,
+    .fa-hori-lower,.fa-janja-upper,.fa-janja-lower,.fa-shema-upper,.fa-shema-lower,.fa-ti-upper,.fa-ti-lower
+    
+    {
+        font-family: 'STACoptic' !important
     }
 }

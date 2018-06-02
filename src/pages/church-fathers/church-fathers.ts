@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { DesertPage } from '../desert/desert';
-import { ApostolicPage } from '../apostolic/apostolic';
+import { DesertPage } from '../church-fathers/desert/desert';
+import { ApostolicPage } from '../church-fathers/apostolic/apostolic';
 
 /**
  * Generated class for the ChurchFathersPage page.

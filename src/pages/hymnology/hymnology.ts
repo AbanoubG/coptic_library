@@ -1,19 +1,23 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AnnunciationPage } from '../annunciation/annunciation';
-import { NativityPage } from '../nativity/nativity';
-import { TheophanyPage } from '../theophany/theophany';
-import { EntryPage } from '../entry/entry';
-import { ResurrectionPage } from '../resurrection/resurrection';
-import { AscensionPage } from '../ascension/ascension';
-import { PentecostPage } from '../pentecost/pentecost';
-import { CircumcisionPage } from '../circumcision/circumcision';
-import { EgyptPage } from '../egypt/egypt';
-import { PresentationPage } from '../presentation/presentation';
-import { WeddingPage } from '../wedding/wedding';
-import { TransfigurationPage } from '../transfiguration/transfiguration';
-import { CovenantPage } from '../covenant/covenant';
-import { ThomasPage } from '../thomas/thomas';
+import { AnnunciationPage } from '../hymnology/annunciation/annunciation';
+import { NativityPage } from '../hymnology/nativity/nativity';
+import { TheophanyPage } from '../hymnology/theophany/theophany';
+import { EntryPage } from '../hymnology/entry/entry';
+import { ResurrectionPage } from '../hymnology/resurrection/resurrection';
+import { AscensionPage } from '../hymnology/ascension/ascension';
+import { PentecostPage } from '../hymnology/pentecost/pentecost';
+import { CircumcisionPage } from '../hymnology/circumcision/circumcision';
+import { EgyptPage } from '../hymnology/egypt/egypt';
+import { PresentationPage } from '../hymnology/presentation/presentation';
+import { WeddingPage } from '../hymnology/wedding/wedding';
+import { TransfigurationPage } from '../hymnology/transfiguration/transfiguration';
+import { CovenantPage } from '../hymnology/covenant/covenant';
+import { ThomasPage } from '../hymnology/thomas/thomas';
+import { CongregationPage } from '../hymnology/congregation/congregation';
+import { DeaconPage } from '../hymnology/deacon/deacon';
+import { VersesPage } from '../hymnology/verses/verses';
+
 /**
  * Generated class for the HymnologyPage page.
  *
@@ -85,6 +89,18 @@ export class HymnologyPage {
 
   openThomasPage() {
     this.navCtrl.push(ThomasPage);
+  }
+
+  openCongregationPage() {
+    this.navCtrl.push(CongregationPage);
+  }
+
+  openDeaconPage() {
+    this.navCtrl.push(DeaconPage);
+  }
+
+  openVersesPage() {
+    this.navCtrl.push(VersesPage);
   }
 
 

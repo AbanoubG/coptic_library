@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { DesertPage } from '../desert/desert';
-import { ApostolicPage } from '../apostolic/apostolic';
 import { ChurchFathersPage } from '../church-fathers/church-fathers';
 import { CopticLanguagePage } from '../coptic-language/coptic-language';
 import { ChurchArchitecturePage } from '../church-architecture/church-architecture';
 import { HymnologyPage } from '../hymnology/hymnology';
 import { IconographyPage } from '../iconography/iconography';
-import { AlphaPage } from '../alpha/alpha';
+import {BibleNotesPage} from '../bible-notes/bible-notes';
 
 @Component({
   selector: 'page-home',
@@ -22,9 +20,10 @@ export class HomePage {
 
   initializeItems() {
     this.contents = [
+        { ContentPage: ChurchArchitecturePage, ContentName: 'Church Architecture' },
         { ContentPage: ChurchFathersPage, ContentName: 'Church Fathers' },
         { ContentPage: CopticLanguagePage, ContentName: 'Coptic Language' },
-        { ContentPage: ChurchArchitecturePage, ContentName: 'Church Architecture' },
+        { ContentPage: BibleNotesPage, ContentName: 'Holy Bible Notes' },
         { ContentPage: HymnologyPage, ContentName: 'Hymnology' },
         { ContentPage: IconographyPage, ContentName: 'Iconography' },
         

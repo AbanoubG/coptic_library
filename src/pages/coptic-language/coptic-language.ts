@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AlphaPage } from '../alpha/alpha';
-import { BetaPage } from '../beta/beta';
+import { AlphaPage } from '../coptic-language/alpha/alpha';
+import { BetaPage } from '../coptic-language/beta/beta';
 
 
 

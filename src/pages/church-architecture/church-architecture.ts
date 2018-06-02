@@ -32,10 +32,9 @@ export class ChurchArchitecturePage {
         'Narthex',
         'Chancel',
         ''
-
     ];
-    
 }
+
 
 getItems(ev: any) {
   // Reset items back to all of the items
