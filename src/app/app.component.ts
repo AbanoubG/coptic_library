@@ -11,9 +11,16 @@ import { ChurchArchitecturePage } from '../pages/church-architecture/church-arch
 import { HymnologyPage } from '../pages/hymnology/hymnology';
 import { IconographyPage } from '../pages/iconography/iconography';
 import {BibleNotesPage} from '../pages/bible-notes/bible-notes';
+import { Storage } from '@ionic/storage';
+
+import { SettingsPage } from '../pages/settings/settings';
+import { SettingsProvider } from './../providers/settings/settings';
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
+
+
+
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
@@ -21,9 +28,23 @@ export class MyApp {
   rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
+  appendix: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,private storage: Storage,private settings: SettingsProvider) {
     this.initializeApp();
+
+    
+    
+    this.storage.get('appFontSize').then((val) => {
+      //console.log('selected font size', val);
+      // debugger;
+      if (val) {
+        let htmlRoot: HTMLElement = <HTMLElement>document.getElementsByTagName("html")[0];
+        if (htmlRoot != null) {
+          htmlRoot.style.fontSize = val;
+        }
+      }
+    });
 
     firebase.initializeApp({
       apiKey: '',
@@ -32,20 +53,26 @@ export class MyApp {
       storageBucket: '',
       messagingSenderId: '',
     });
+    
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'Church Architecture', component: ChurchArchitecturePage },
-      { title: 'Church Fathers', component: ChurchFathersPage },
-      { title: 'Coptic Language', component: CopticLanguagePage },
-      {title:  'Holy Bible Notes', component: BibleNotesPage},
-      { title: 'Hymnology', component: HymnologyPage },
-      { title: 'Iconography', component: IconographyPage },
-
+      //{ title: 'Church Architecture', component: ChurchArchitecturePage },
+      //{ title: 'Church Fathers', component: ChurchFathersPage },
+      //{title:  'Holy Bible Notes', component: BibleNotesPage},
+      //{ title: 'Hymnology', component: HymnologyPage },
+      //{ title: 'Iconography', component: IconographyPage },
     ];
 
+    this.appendix = [
+      { title: 'Coptic Language', component: CopticLanguagePage },
+    ]
   }
+
+  openSettings() {
+    this.nav.push(SettingsPage);
+  };
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -56,9 +83,13 @@ export class MyApp {
     });
   }
 
+
+
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
+
     this.nav.setRoot(page.component);
-  }
+  };
+
 }

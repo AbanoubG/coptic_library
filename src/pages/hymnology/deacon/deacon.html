@@ -7,12 +7,19 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>deacon</ion-title>
+    <ion-title>Deacon Responses</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+      <button ion-item *ngFor="let response of responses" (click)="openPage(response)" >
+        {{ response.ResponseName }}
+      </button>
+    </ion-list>
 
 </ion-content>

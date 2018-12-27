@@ -1,0 +1,50 @@
+<!--
+  Generated template for the SettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  
+  
+<!-- 
+    <ion-list>
+      <ion-title>Font size </ion-title>
+      <button (click)="increaseFontSize(-0.5)" ion-button icon-only>
+        <ion-icon name="remove"></ion-icon>
+      </button>
+      <button (click)="increaseFontSize(0.5)" ion-button icon-only>
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-list> -->
+    <!-- <button ion-button full icon-left (click)="toggleAppTheme()">
+        <ion-icon  name="bulb"></ion-icon>Switch theme
+      </button> -->
+
+
+    <ion-list>
+
+         <ion-item >
+            <ion-label>Low Light mode</ion-label>
+            <ion-toggle class="toggle-bg" [(ngModel)]="lowLightMode" (ionChange)="toggleAppTheme()"></ion-toggle>
+          </ion-item>
+       
+        <ion-item>
+            <ion-label> Text size</ion-label>
+           
+          <ion-icon name="remove" item-end style="margin-right: 30px;"  (click)="adjustFontSize(1, false)"></ion-icon>
+          <ion-icon name="add" item-end  (click)="adjustFontSize(1, true)"></ion-icon>
+        </ion-item>
+      </ion-list>
+
+</ion-content>

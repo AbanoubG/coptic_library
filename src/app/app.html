@@ -1,7 +1,7 @@
 <ion-menu [content]="content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Coptic Library Menu</ion-title>
+      <ion-title>Content Menu</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -11,13 +11,14 @@
         {{p.title}}
       </button>
     </ion-list>
-    <ion-footer>
-        <ion-toolbar>
-          <button ion-button icon-only color="light" >
-            <ion-icon name="settings"></ion-icon>
-          </button>
-        </ion-toolbar>
-      </ion-footer>
+    <ion-list> 
+        <ion-list-header>
+            Appendix
+          </ion-list-header>
+        <button menuClose ion-item *ngFor="let a of appendix" (click)="openPage(a)">
+          {{a.title}}
+        </button>
+      </ion-list>
 
   </ion-content>
 

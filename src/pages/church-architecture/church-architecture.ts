@@ -25,8 +25,8 @@ export class ChurchArchitecturePage {
 
   initializeItems() {
     this.words = [
-        'Ambon',
-        'Cupula',
+        'Ambon <br/> this is at test',
+        'Cupula - what does this mena',
         'Iconostasis',
         'Nave',
         'Narthex',

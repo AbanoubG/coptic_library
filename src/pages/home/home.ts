@@ -1,11 +1,25 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ChurchFathersPage } from '../church-fathers/church-fathers';
-import { CopticLanguagePage } from '../coptic-language/coptic-language';
-import { ChurchArchitecturePage } from '../church-architecture/church-architecture';
-import { HymnologyPage } from '../hymnology/hymnology';
-import { IconographyPage } from '../iconography/iconography';
-import {BibleNotesPage} from '../bible-notes/bible-notes';
+import { AnnunciationPage } from '../hymnology/annunciation/annunciation';
+import { NativityPage } from '../hymnology/nativity/nativity';
+import { TheophanyPage } from '../hymnology/theophany/theophany';
+import { EntryPage } from '../hymnology/entry/entry';
+import { ResurrectionPage } from '../hymnology/resurrection/resurrection';
+import { AscensionPage } from '../hymnology/ascension/ascension';
+import { PentecostPage } from '../hymnology/pentecost/pentecost';
+import { CircumcisionPage } from '../hymnology/circumcision/circumcision';
+import { EgyptPage } from '../hymnology/egypt/egypt';
+import { PresentationPage } from '../hymnology/presentation/presentation';
+import { WeddingPage } from '../hymnology/wedding/wedding';
+import { TransfigurationPage } from '../hymnology/transfiguration/transfiguration';
+import { CovenantPage } from '../hymnology/covenant/covenant';
+import { ThomasPage } from '../hymnology/thomas/thomas';
+import { CongregationPage } from '../hymnology/congregation/congregation';
+import { DeaconPage } from '../hymnology/deacon/deacon';
+import { VersesPage } from '../hymnology/verses/verses';
+
+import { CopticDateProvider } from '../../providers/coptic-date/coptic-date';
+import { SettingsPage } from '../../pages/settings/settings';
 
 @Component({
   selector: 'page-home',
@@ -13,43 +27,103 @@ import {BibleNotesPage} from '../bible-notes/bible-notes';
 })
 export class HomePage {
   contents: any;
+  public copticDate: any;
 
-  constructor(public navCtrl: NavController, private nav: NavController) {
-    this.initializeItems();
-  }
+  constructor(public navCtrl: NavController, private nav: NavController,private coptic: CopticDateProvider) {
+        // Return today's date and time
+        var currentTime = new Date();
 
-  initializeItems() {
-    this.contents = [
-        { ContentPage: ChurchArchitecturePage, ContentName: 'Church Architecture' },
-        { ContentPage: ChurchFathersPage, ContentName: 'Church Fathers' },
-        { ContentPage: CopticLanguagePage, ContentName: 'Coptic Language' },
-        { ContentPage: BibleNotesPage, ContentName: 'Holy Bible Notes' },
-        { ContentPage: HymnologyPage, ContentName: 'Hymnology' },
-        { ContentPage: IconographyPage, ContentName: 'Iconography' },
-        
-
-    ]
+        // returns the month (from 0 to 11)
+        var month = currentTime.getMonth();
     
-}
-
-getItems(ev) {
-  // Reset items back to all of the items
-  this.initializeItems();
-
-  // set val to the value of the searchbar
-  let val = ev.target.value;
-
-  // if the value is an empty string don't filter the items
-  if (val && val.trim() != '') {
-      this.contents = this.contents.filter((item) => {
-          return (item.ContentName.toLowerCase().indexOf(val.toLowerCase()) > -1);
-      })
+        // returns the day of the month (from 1 to 31)
+        var day = currentTime.getDate();
+    
+        // returns the year (four digits)
+        var year = currentTime.getFullYear();
+    
+        console.log(month, day + " " + year);
+    
+        this.copticDate = this.coptic.getCopticDateString(year-1, month, day);
+        console.log(this.copticDate);
   }
-}
+  public openAnnunciationPage() {
+    this.navCtrl.push(AnnunciationPage);
+  }
+
+  public openNativityPage() {
+    this.navCtrl.push(NativityPage);
+  }
+
+  openTheophanyPage() {
+    this.navCtrl.push(TheophanyPage);
+  }
+
+  openEntryPage() {
+    this.navCtrl.push(EntryPage);
+  }
+
+  openResurrectionPage() {
+    this.navCtrl.push(ResurrectionPage);
+  }
+
+  openAscensionPage() {
+    this.navCtrl.push(AscensionPage);
+  }
+
+  openPentecostPage() {
+    this.navCtrl.push(PentecostPage);
+  }
+
+  openCircumcisionPage() {
+    this.navCtrl.push(CircumcisionPage);
+  }
+
+  openEgyptPage() {
+    this.navCtrl.push(EgyptPage);
+  }
+
+  openPresentationPage() {
+    this.navCtrl.push(PresentationPage);
+  }
+
+  openWeddingPage() {
+    this.navCtrl.push(WeddingPage);
+  }
+
+  openTransfigurationPage() {
+    this.navCtrl.push(TransfigurationPage);
+  }
+
+  openCovenantPage() {
+    this.navCtrl.push(CovenantPage);
+  }
+
+  openThomasPage() {
+    this.navCtrl.push(ThomasPage);
+  }
+
+  openCongregationPage() {
+    this.navCtrl.push(CongregationPage);
+  }
+
+  openDeaconPage() {
+    this.navCtrl.push(DeaconPage);
+  }
+
+  openVersesPage() {
+    this.navCtrl.push(VersesPage);
+  }
+
 
 public openPage(content: any): void {
   this.nav.push(content.ContentPage);
 }
+
+openSettingsPage() {
+  this.nav.push(SettingsPage);
+};
+
 
 
 

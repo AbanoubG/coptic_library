@@ -18,6 +18,13 @@
     background: url('../assets/imgs/circles-light.png') no-repeat fixed center;
     background-size: cover;
   }
+
+  .blockquote {
+    border-left: 7px solid #b83131;
+    background: #ebebeb;
+    margin: 1.5em 25px;
+    padding: 1px 10px;
+}
   @font-face {
     font-family: Coptic;
     src: url('../assets/fonts/coptic.ttf')

@@ -1,0 +1,30 @@
+page-dr-1 {
+
+    body, ion-title span, h1, h2, h3, h4, h5, h6, .coptic  {
+        font-family: 'STACoptic' !important
+    }
+    #app-section {
+        #app-title {
+          color: color($colors, 'primary');
+          text-transform: uppercase;
+        }
+        ion-icon {
+          font-size: 15rem;
+        }
+      }
+      #media-controls {
+        button {
+          ion-icon {
+            font-size: 2.5rem;
+          }
+        }
+      }
+
+      blockquote {
+        border-left: 7px solid #b83131;
+        background: #ebebeb;
+        margin: 1.5em 25px;
+        padding: 1px 10px;
+    }
+}
+
